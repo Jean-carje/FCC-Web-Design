@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>FCC: Survey Form Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header"> 
+            <h1 id="title">FCC:Survey Form</h1>
+            <p id="description">Please let us know how was our product and service?</p>
+        </header>
+
+        <form action="" id="survey-form">
+            <div class="form-group">
+                <input type="text"  id="name" value="name" placeholder="Enter your name." class="form-control" required>
+                <label for="name-label" id="name">Name </label>
+            </div>
+            <div class="form-group email-left">
+                <input type="email" name="email" id="email" class="form-control" placeholder="user@example.com" required>
+                <label for="email" id="email-label">Email</label>
+            </div>
+            <div class="form-group number-right">
+                <input type="number" name="contact" id="number" class="form-control" placeholder="Phone Number:" min="10000" max="100000000">
+                <label for="number" id="number-label">Contact Number</label>
+            </div>
+
+            <div class="both"></div>
+
+            <div class="form-group dropdown-div">
+                <p class="second-titles">Is this the first time you are using our product or service?</p>
+                <select name="dropdown" name="taking" id="dropdown" class="form-control">
+                    <option disabled selected value class="option">Select:</option>
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="products">
+                <p class="second-titles">Select our product or service:</p>
+                <div class="box-products">
+                    <p>
+                        <input name="products" class="input-checkbox" type="checkbox" id="postcards" value="digital-postcards">
+                        <label for="postcards">Digital Postcards</label>
+                    </p>
+                    <p>
+                        <input name="products" class="input-checkbox" type="checkbox" id="banners" value="banners">
+                        <label for="banners">Twitter Banners</label>
+                    </p>
+                    <p>
+                        <input name="products" class="input-checkbox" type="checkbox" id="templates" value="templates">
+                        <label for="templates">LinkedIn Templates</label>
+                    </p>
+                    <p>
+                        <input name="products" class="input-checkbox" type="checkbox" id="icons" value="icons">
+                        <label for="icons">Icons, shapes, and backgrounds</label>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="form-group form-radio">
+                <p class="second-titles">How satisfied are you with the product or service?</p>
+                <p class="input-radio">
+                    <input id="radio1" type="radio" name="stars" value="5">
+                    <label for="radio1">★</label>
+                    <input id="radio2" type="radio" name="stars" value="4">
+                    <label for="radio2">★</label>
+                    <input id="radio3" type="radio" name="stars" value="3">
+                    <label for="radio3">★</label>
+                    <input id="radio4" type="radio" name="stars" value="2">
+                    <label for="radio4">★</label>
+                    <input id="radio5" type="radio" name="stars" value="1">
+                    <label for="radio5">★</label>
+                </p>
+            </div>
+            
+            <div class="form-group comments-area">
+                <p class="second-titles">Additional Comments:</p>
+                <textarea id="comments" class="input-textarea" cols="30" rows="10" placeholder="Comments"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+
+        <footer id="footer">
+            <hr>
+            <address id=Jean>Website template designed and developed by: <a href="https://github.com/Jean-carje" target="_blank" class="links">Jean Estevez</a>.</address>
+
+            <address>Background image: <a href="https://pixabay.com/users/loginueve_ilustra-12954610/" target="_blank" class="links">loginueve_ilustra</a>
+            <br>
+            </address>
+
+            <address>More info on: <a id=tribute-link href="https://www.freecodecamp.org" target="_blank" class="links">freeCodeCamp</a>
+                <br>
+            </address>
+        </footer>
+    </div>
+</body>
+</html>

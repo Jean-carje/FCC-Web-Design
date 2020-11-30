@@ -1,0 +1,433 @@
+body {
+    /* margin: 0;
+    padding: 0; */
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('https://cdn.pixabay.com/photo/2020/05/20/03/50/gears-5193383_960_720.png') rgb(197, 184, 0);
+}
+
+/* =========================
+   GENERAL
+   ========================= */
+
+.container {
+    background-color: rgba(0, 0, 0, 0.938);
+    width: 800px;
+    margin: 20px auto;
+    padding: 15px 0;
+    box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.second-titles {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 25px 0;
+    letter-spacing: 0.10rem;
+}
+
+/* =========================
+   HEAD
+   ========================= */
+
+#title {
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(235, 231, 0);
+    padding-top: 18px;
+    text-shadow: -2px 1px 4px rgba(82, 80, 80, 0.671);
+}
+
+#description {
+    font-size: 1.8rem;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 40px;
+    text-shadow: 0 1px 2px rgba(224, 210, 7, 0.863);
+}
+
+/* =========================
+   FORM
+   ========================= */
+
+#survey-form {
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+
+/* =========================
+   BORDER: inputs and labels
+   ========================= */
+
+label,
+.form-control {
+    transition: all 0.30s;
+    touch-action: manipulation;
+    display: inline-block;
+}
+
+.form-control {
+    width: 100%;
+    border: 0;
+    border-radius: 2px;
+    border-bottom: 2px solid rgb(166, 168, 143);
+    outline: none;
+    font-size: 1.4rem;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.10s;
+}
+
+.form-control::placeholder {color: transparent; }
+
+.form-control:focus {
+    outline: 0;
+    padding-bottom: 6px;  
+    font-weight: 700px;
+    border-width: 3px;
+    border-image: linear-gradient(to right, black, yellow);
+    border-image-slice: 1;
+}
+
+.form-control:placeholder-shown + label {
+    width: 80%;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.3);
+}
+
+form-control:not(:placeholder-shown) + label,
+.form-control:focus + label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+}
+
+.email-left {
+    width: 55%;
+    float: left;
+}
+.number-right {
+    width: 40%;
+    float: right;
+}
+.both { clear: both; }
+
+
+/* =========================
+   DROWPDOWN SELECT
+   ========================= */
+
+.dropdown-div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown-div .second-titles { width: 80%; }
+
+#dropdown {
+    display: inline-block;
+    width: 15%;
+    margin: 0 auto;
+    letter-spacing: 0.03rem;
+    padding: 0;
+    height: 4em;
+}
+
+#dropdown option {
+    background-color: rgba(0, 0, 0, 0.883);
+    display: inline-block;
+    font-size: 1.1rem;
+    min-height: 0.5em
+}
+
+
+/* =========================
+   CHECKBOX
+   ========================= */
+
+.products { margin: 50px 0 0 0; }
+
+.box-products {
+    width: 60%;
+    font-size: 1.3rem;
+    letter-spacing: 0.05rem;
+    user-select: none;
+    margin: 0 auto;
+}
+
+.products .input-checkbox { display: none; }
+
+.input-checkbox + label {
+    position: relative;
+    padding-left: 2em;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.input-checkbox + label:before {
+    content: "";
+    position: absolute;
+    width: 1.20em;
+    height: 1.20em;
+    left: 0;
+    top: 0;
+    border: 1px solid rgba(255, 255, 255, 0.835);
+    border-radius: 20%;
+    box-shadow: inset 0 1px 2px  rgba(224, 209, 7, 0.424);
+    background-color: rgba(26, 25, 10, 0.678);
+}
+
+.input-checkbox + label:after {
+    content: "\2713\0020";
+    position: absolute;
+    left: 0.30em;
+    top: 0;
+    font-size: 1em;
+    color: rgb(251, 247, 2);
+    background: transparent;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    transition: all .3s;
+}
+
+.input-checkbox:not(:checked) + label:after {
+    border-color: transparent;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.input-checkbox:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.input-checkbox:disabled + label:before {
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.918);
+    background-color: rgba(255, 255, 255, 0.835);
+}
+
+.input-checkbox:disabled + label:after {
+    color: rgba(255, 255, 255, 0.918);
+}
+
+
+/* =========================
+   RADIOBUTTON
+   ========================= */
+
+.form-radio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.input-radio {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form-radio .input-radio label { 
+    color: rgb(245, 245, 245);
+    font-size: 2.5rem;
+    letter-spacing: 0.50rem;
+}
+
+.form-radio .input-radio input { 
+    display: none;
+}
+
+.input-radio {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+.form-radio .input-radio label:hover ~ label { 
+    color: rgb(251, 247, 2);
+}
+
+.form-radio .input-radio input[type = "radio"]:checked ~ label{
+    color: rgb(251, 247, 2);
+}
+
+
+/* =========================
+   COMMENTS
+   ========================= */
+
+.comments-area {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px 0;
+}
+
+.input-textarea {
+    resize: vertical;
+    width: 90%;
+    height: 100px;
+    min-height: 80px;
+    max-height: 200px;
+    margin: 0 auto;
+    border: 2px solid rgba(190, 190, 190, 0.835);
+    border-radius: 5px;
+    background-color: rgba(255, 254, 223, 0.931);;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 700;
+}
+
+.input-textarea::placeholder {
+    color: gray;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.input-textarea:hover,
+.input-textarea:focus {
+    border: 2px solid rgba(224, 210, 7, 0.863);
+    box-shadow: 1px 1px 5px rgba(102, 101, 83, 0.863);
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.submit-button {
+    transition: background-image 0.30s;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    width: 20%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 20px; 
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgb(204, 204, 204);
+    
+    background-image: linear-gradient(to right,rgb(61, 59, 0) 0%, rgb(161, 159, 2) 50%, rgb(255, 251, 2) 100%);
+    box-shadow: rgb(34, 34, 34) 3px 3px 10px 3px;
+    border: 2px solid rgb(255, 252, 91); 
+}
+
+.submit-button:hover,
+.submit-button:active {
+    background: rgb(255, 251, 22);
+    text-shadow: 0 1px 1px rgb(146, 141, 0);
+    background-image: linear-gradient(to right,rgb(195, 189, 0) 0%, rgb(226, 222, 0) 30%, rgb(255, 251, 28) 100%);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+#footer {
+    margin: 40px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+hr {
+    border: none;
+    border-top: 3px double rgb(155, 156, 136);
+    margin-bottom: 30px;
+}
+
+address {
+    margin: 10px 0;
+    margin-bottom: 15px;
+}
+
+.links {
+    color: rgb(211, 197, 9);
+    font-style: normal;
+    text-decoration: none;
+}
+
+.links:hover {
+    color: rgb(255, 238, 5);
+    font-weight: bold;
+}
+
+#Jean {
+    color: white;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* 1000px */
+@media screen and (max-width: 1000px) {
+    body {
+        background-size: 400% 100%;
+    }
+}
+
+/* 900px */
+@media screen and (max-width: 900px) {
+    .container {
+        width: 700px;
+    }
+    #description {
+        font-size: 1.6rem;
+        margin: 0 10px 40px 10px;
+    }
+    .form-control {
+        font-size: 1.2rem;
+    }
+}
+
+/* 800px */
+@media screen and (max-width: 800px) {
+    .container {
+        width: 600px;
+    }
+    .form-control {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        width: 100%;
+    }
+    #title {
+        font-size: 2.5rem;
+    }
+    .email-left,
+    .number-right {
+        width: 100%;
+        float: left;
+    }
+    .dropdown-div .second-titles,
+    .form-radio .second-titles {
+        width: 100%;
+        text-align: center;
+    }
+    #dropdown {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .second-titles {
+        font-size: 1.4rem;
+    }
+    .submit-button {
+        font-size: 1.2rem;
+        width: 25%;
+    }
+}
